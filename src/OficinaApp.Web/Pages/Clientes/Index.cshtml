@@ -1,0 +1,31 @@
+@page
+@model OficinaApp.Web.Pages.Clientes.IndexModel
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Telefone</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.CPF</td>
+            </tr>
+        }
+    </tbody>
+</table>
