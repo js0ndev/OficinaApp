@@ -8,5 +8,6 @@ public interface IClienteService
     Task<List<Cliente>> ObterTodosAsync();
     Task<Cliente?> ObterPorIdAsync(Guid id);
     Task CriarAsync(CreateClienteDto dto);
+    Task AtualizarAsync(UpdateClienteDto dto);
     Task RemoveAsync(Guid id);
 }

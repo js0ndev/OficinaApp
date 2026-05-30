@@ -37,4 +37,16 @@ public class ClienteService : IClienteService
     {
         await _clienteRepository.RemoverAsync(id);
     }
+    public async Task AtualizarAsync(UpdateClienteDto dto)
+    {
+        var cliente = await _clienteRepository.ObterPorIdAsync(dto.Id);
+        if(cliente is null) return;
+
+        cliente.Nome = dto.Nome;
+        cliente.Telefone = dto.Telefone;
+        cliente.Email = dto.Email;
+        cliente.CPF = dto.CPF;
+
+        await _clienteRepository.AtualizarAsync(cliente);
+    }
 }
