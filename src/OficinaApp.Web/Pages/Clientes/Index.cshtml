@@ -17,6 +17,7 @@
             <th>Telefone</th>
             <th>Email</th>
             <th>CPF</th>
+            <th>Ações</th>
         </tr>
     </thead>
 
@@ -28,6 +29,13 @@
                 <td>@cliente.Telefone</td>
                 <td>@cliente.Email</td>
                 <td>@cliente.CPF</td>
+                <td>
+    <a asp-page="Edit"
+       asp-route-id="@cliente.Id"
+       class="btn btn-warning">
+       Editar
+    </a>
+</td>
             </tr>
         }
     </tbody>
