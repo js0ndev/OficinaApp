@@ -1,0 +1,32 @@
+@page "{id:guid}"
+@model OficinaApp.Web.Pages.Clientes.DeleteModel
+
+<h2>Excluir Cliente</h2>
+
+<div class="alert alert-danger">
+
+    <p>
+        Deseja realmente excluir:
+    </p>
+
+    <strong>
+        @Model.Cliente.Nome
+    </strong>
+
+</div>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Cliente.Id"/>
+
+    <button type="submit"
+            class="btn btn-danger">
+        Excluir
+    </button>
+
+    <a asp-page="Index"
+       class="btn btn-secondary">
+        Cancelar
+    </a>
+
+</form>
