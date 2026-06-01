@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using OficinaApp.Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
 using OficinaApp.Domain.Entities;
 
 namespace OficinaApp.Infrastructure.Data;
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {

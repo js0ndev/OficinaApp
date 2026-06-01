@@ -4,6 +4,7 @@ using OficinaApp.Domain.Interfaces;
 using OficinaApp.Infrastructure.Repositories;
 using OficinaApp.Application.Interfaces;
 using OficinaApp.Application.Services;
+using OficinaApp.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
